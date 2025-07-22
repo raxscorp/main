@@ -7,6 +7,12 @@ const apps = [
     link: "https://raxscorp.pythonanywhere.com/gpa_calculator/"
   },
   {
+    title: "Stickman Zombie Game",
+    desc: "Protect your base from zombies",
+    image: "stick.png",
+    link: "https://raxscorp.pythonanywhere.com/export_web/stick2.html"
+  },
+  {
     title: "Timeboxing",
     desc: "Create your schedule for productivity",
     image: "timebox.png",
