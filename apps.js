@@ -10,7 +10,7 @@ const apps = [
     title: "Stickman Zombie Game",
     desc: "Protect your base from zombies",
     image: "stick.png",
-    link: "https://raxscorp.com/export_web/stick2.html"
+    link: "https://www.raxscorp.com/export/index.html"
   },
   {
     title: "Timeboxing",
