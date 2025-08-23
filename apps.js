@@ -13,6 +13,12 @@ const apps = [
     link: "https://www.raxscorp.com/export/index.html"
   },
   {
+    title: "PhotoInk",
+    desc: "Protect your base from zombies",
+    image: "photoink.png",
+    link: "https://www.raxscorp.com/photo/index.html"
+  },
+  {
     title: "Timeboxing",
     desc: "Create your schedule for productivity",
     image: "timebox.png",
