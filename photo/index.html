@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Photo Pencil Editor</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 20px;
+    }
+    #editor {
+      position: relative;
+      display: inline-block;
+      border: 2px solid #ccc;
+      margin-top: 15px;
+    }
+    #drawCanvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      cursor: crosshair;
+    }
+    img {
+      display: block;
+    }
+    button, input[type="file"] {
+      margin-top: 15px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      background: #333;
+      color: #fff;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover, input[type="file"]:hover {
+      background: #555;
+    }
+    input[type="file"] {
+      background: #0066cc;
+    }
+  </style>
+</head>
+<body>
+  <h2>Photo Pencil Editor</h2>
+
+  <!-- Upload Image Button -->
+  <input type="file" id="upload" accept="image/*">
+
+  <div id="editor" style="display:none;">
+    <img id="photo" alt="Photo">
+    <canvas id="drawCanvas"></canvas>
+  </div>
+
+  <br>
+  <button onclick="download()" style="display:none;" id="downloadBtn">Download Edited Photo</button>
+
+  <script>
+    const img = document.getElementById("photo");
+    const canvas = document.getElementById("drawCanvas");
+    const ctx = canvas.getContext("2d");
+    const editor = document.getElementById("editor");
+    const downloadBtn = document.getElementById("downloadBtn");
+    const upload = document.getElementById("upload");
+
+    let drawing = false;
+    let imageLoaded = false;
+
+    // Handle image upload
+    upload.addEventListener("change", function(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        img.onload = () => {
+          // Use natural image size
+          const w = img.naturalWidth;
+          const h = img.naturalHeight;
+
+          // Set both img and canvas to exact same size
+          img.width = w;
+          img.height = h;
+          canvas.width = w;
+          canvas.height = h;
+          canvas.style.width = w + "px";
+          canvas.style.height = h + "px";
+
+          editor.style.display = "inline-block";
+          downloadBtn.style.display = "inline-block";
+          imageLoaded = true;
+        };
+        img.src = event.target.result;
+      };
+      reader.readAsDataURL(file);
+    });
+
+    // Drawing functions
+    canvas.addEventListener("mousedown", startDraw);
+    canvas.addEventListener("mouseup", endDraw);
+    canvas.addEventListener("mouseout", endDraw);
+    canvas.addEventListener("mousemove", draw);
+
+    function startDraw(e) {
+      if (!imageLoaded) return;
+      drawing = true;
+      ctx.beginPath();
+      ctx.moveTo(e.offsetX, e.offsetY);
+    }
+
+    function endDraw() {
+      drawing = false;
+      ctx.beginPath();
+    }
+
+    function draw(e) {
+      if (!drawing) return;
+      ctx.lineWidth = 3;         // pencil thickness
+      ctx.lineCap = "round";     // smooth lines
+      ctx.strokeStyle = "black"; // pencil color
+
+      ctx.lineTo(e.offsetX, e.offsetY);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(e.offsetX, e.offsetY);
+    }
+
+    // Download function
+    function download() {
+      if (!imageLoaded) {
+        alert("Please upload an image first!");
+        return;
+      }
+
+      const finalCanvas = document.createElement("canvas");
+      finalCanvas.width = img.naturalWidth;
+      finalCanvas.height = img.naturalHeight;
+      const fctx = finalCanvas.getContext("2d");
+
+      fctx.drawImage(img, 0, 0, img.naturalWidth, img.naturalHeight);
+      fctx.drawImage(canvas, 0, 0, img.naturalWidth, img.naturalHeight);
+
+      const link = document.createElement("a");
+      link.download = "edited-photo.png";
+      link.href = finalCanvas.toDataURL("image/png");
+      link.click();
+    }
+  </script>
+</body>
+</html>
