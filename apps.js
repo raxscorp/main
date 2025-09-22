@@ -15,18 +15,18 @@ const apps = [
    {
     title: "UK Minimum Wage Check",
     desc: "check if your wage is over wage threshold",
-    image: "photoink.png",
+    image: "wage.png",
     link: "https://www.raxscorp.com/photo/index2.html"
   },
    {
     title: "Webp to PNG",
     desc: "Convert files from Webp to png format",
-    image: "photoink.png",
+    image: "webp.png",
     link: "https://www.raxscorp.com/photo/index2.html"
   },
   {
     title: "PhotoInk",
-    desc: "Protect your base from zombies",
+    desc: "doodle on images",
     image: "photoink.png",
     link: "https://www.raxscorp.com/photo/index2.html"
   },
