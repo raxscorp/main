@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pencil Photo Editor</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: #f8f9fa;
+    }
+    .ad-section {
+      background: #e9ecef;
+      border-left: 2px solid #dee2e6;
+      min-height: 80vh;
+      padding: 10px;
+    }
+    .canvas-container {
+      text-align: center;
+      padding: 10px;
+    }
+    canvas {
+      border: 1px solid #ccc;
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="bg-dark text-white text-center py-3">
+    <h2>Pencil Photo Editor </h2>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container-fluid my-3">
+    <div class="row">
+      <!-- Main Section (70%) -->
+      <script src="pencil-editor.js"></script>
+
+      </div>
+
+      <!-- Ad Section (30%) -->
+      <div class="col-md-4 col-sm-12 ad-section">
+        <h5>Sponsored</h5>
+        <div class="mb-3 p-2 bg-white shadow-sm rounded">Ad space 1</div>
+        <div class="mb-3 p-2 bg-white shadow-sm rounded">Ad space 2</div>
+        <div class="mb-3 p-2 bg-white shadow-sm rounded">Ad space 3</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-2">
+    <p>&copy; 2025 Pencil Editor | Built with ❤️ and Bootstrap</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

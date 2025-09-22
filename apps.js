@@ -12,11 +12,23 @@ const apps = [
     image: "stick.png",
     link: "https://www.raxscorp.com/export/index.html"
   },
+   {
+    title: "UK Minimum Wage Check",
+    desc: "check if your wage is over wage threshold",
+    image: "photoink.png",
+    link: "https://www.raxscorp.com/photo/index2.html"
+  },
+   {
+    title: "Webp to PNG",
+    desc: "Convert files from Webp to png format",
+    image: "photoink.png",
+    link: "https://www.raxscorp.com/photo/index2.html"
+  },
   {
     title: "PhotoInk",
     desc: "Protect your base from zombies",
     image: "photoink.png",
-    link: "https://www.raxscorp.com/photo/index.html"
+    link: "https://www.raxscorp.com/photo/index2.html"
   },
   {
     title: "Timeboxing",
