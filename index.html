@@ -1,55 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Company</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9988505890487930"
-     crossorigin="anonymous"></script>
-	<meta name="google-adsense-account" content="ca-pub-9988505890487930">
-	
-      <!-- Google tag (gtag.js) -->
+    <style>
+        body {
+            background: #ffffff;
+            font-family: Arial, sans-serif;
+        }
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DEE12M2NEH"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        .service-box {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #fff;
+            transition: 0.3s;
+        }
 
-      gtag('config', 'G-DEE12M2NEH');
-    </script>
-      
-      <!-- Google tag (gtag.js) -->
+        .service-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Web App Showcase</title>
-  <link rel="stylesheet" href="style.css" />
+        .service-img {
+            height: 150px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .service-title {
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            border-top: 1px solid #eee;
+        }
+
+        .section-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .right-section {
+                margin-top: 30px;
+            }
+        }
+        .who-icon {
+        width: 70px;     /* adjust size here */
+        height: 70px;
+        object-fit: cover;
+    }
+    </style>
 </head>
+
 <body>
+    <!-- NAVBAR -->
+   <nav class="navbar navbar-expand-lg bg-white border-bottom">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="https://www.raxscorp.com/">Raxscorp</a>
 
-  <h1 class="title">Web Appss</h1>
-  <h2 class="title">Raxscorp</h2>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-  <div class="layout">
-    <!-- Cards container (empty, JS will fill it) -->
-    <div class="main" id="cardContainer"></div>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="https://www.raxscorp.com/portfolio.html">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.raxscorp.com/apps.html">Apps</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.raxscorp.com/contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.raxscorp.com/about.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <!-- Ad section -->
-    <div class="ads">
-      <strong>Ad Space</strong>
-<!-- sidebar -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-9988505890487930"
-     data-ad-slot="4058495310"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
+    <!-- MAIN BODY -->
+    <div class="container py-5">
+        <div class="row">
+            <!-- LEFT SECTION (Services) -->
+            <div class="col-md-6">
+                <h4 class="section-title text-center" >We Will Help You With:</h4>
+                <div class="mb-5"></div>
+                <div class="row g-3">
+
+                    <!-- Service 1 -->
+                    <div class="col-md-6">
+                        <div class="service-box">
+                            <img src="landing/website.webp" class="service-img">
+                            <div class="service-title">Website Development</div>
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="col-md-6">
+                        <div class="service-box">
+                            <img src="landing/automation.jpg" class="service-img">
+                            <div class="service-title">Automation</div>
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="col-md-6">
+                        <div class="service-box">
+                            <img src="landing/artificial.webp" class="service-img">
+                            <div class="service-title">AI Integration</div>
+                        </div>
+                    </div>
+
+
+                    <!-- Service 3 -->
+                    <div class="col-md-6">
+                        <div class="service-box">
+                            <img src="landing/cloud.png" class="service-img">
+                            <div class="service-title">Cloud Computing</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Service 3 -->
+                    <div class="col-md-6">
+                        <div class="service-box">
+                            <img src="landing/365.jpg" class="service-img">
+                            <div class="service-title">Productivity</div>
+                        </div>
+                    </div>
+
+                        
+                    <!-- Service 3 -->
+                    <div class="col-md-6">
+                        <div class="service-box">
+                            <img src="landing/erp.jpg" class="service-img">
+                            <div class="service-title">ERP Systems</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- RIGHT SECTION -->
+            <div class="col-md-6 right-section">
+                <h4 class="section-title text-center">These Services Are For:</h4>
+                <div class="mb-5"></div>
+
+                <div class="row text-center g-4">
+
+                    <!-- Person 1 -->
+                    <div class="col-4 text-center">
+                        <img src="landing/stall.png" class="rounded-circle who-icon" alt="">
+                        <div>Small Business</div>
+                    </div>
+
+                    <!-- Person 2 -->
+                    <div class="col-4 text-center">
+                        <img src="landing/startup.png" class="rounded-circle who-icon" alt="">
+                        <div>Startups</div>
+                    </div>
+
+                    <!-- Person 3 -->
+                    <div class="col-4 text-center">
+                        <img src="landing/freelancer.png" class="rounded-circle who-icon" alt="">
+                        <div>Freelancers</div>
+                    </div>
+
+                    <!-- Person 4 -->
+                    <div class="col-4 text-center">
+                        <img src="landing/agency.png" class="rounded-circle who-icon" alt="">
+                        <div>Agencies</div>
+                    </div>
+
+                    <!-- Person 5 -->
+                    <div class="col-4 text-center">
+                        <img src="landing/creator.png" class="rounded-circle who-icon" alt="">
+                        <div>Influencers</div>
+                    </div>
+
+                    <!-- Person 6 -->
+                    <div class="col-4 text-center">
+                        <img src="landing/ecom.png" class="rounded-circle who-icon" alt="">
+                        <div>Online Stores</div>
+                    </div>
+                </div>
+                <div class="mb-5"></div>
+
+                <h4 class="section-title mt-4 text-center">How Does It Helps Me ?</h4>
+                <div class="mb-5"></div>
+
+                <div class="row text-center g-4">
+
+                    <!-- Person 1 -->
+                    <div class="col-4 text-center">
+                        <img src="landing/customers.png" class="rounded-circle who-icon" alt="">
+                        <div>Bring Customers</div>
+                    </div>
+
+                    <!-- Person 2 -->
+                    <div class="col-4 text-center">
+                        <img src="landing/ai.png" class="rounded-circle who-icon" alt="">
+                        <div>AI Recommendation</div>
+                    </div>
+
+                    <!-- Person 3 -->
+                    <div class="col-4 text-center">
+                        <img src="landing/visiblity.png" class="rounded-circle who-icon" alt="">
+                        <div> Visibility</div>
+                    </div>
+
+                    <!-- Person 4 -->
+                    <div class="col-4 text-center">
+                        <img src="landing/digital.png" class="rounded-circle who-icon" alt="">
+                        <div>Digital Presence</div>
+                    </div>
+
+                    <!-- Person 5 -->
+                    <div class="col-4 text-center">
+                        <img src="landing/brand.png" class="rounded-circle who-icon" alt="">
+                        <div>Brand Value</div>
+                    </div>
+
+                    <!-- Person 6 -->
+                    <div class="col-4 text-center">
+                        <img src="landing/trust.png" class="rounded-circle who-icon" alt="">
+                        <div>Trust</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
-  </div>
 
-  <script src="apps.js"></script>
- 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
